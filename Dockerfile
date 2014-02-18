@@ -1,6 +1,6 @@
 FROM octohost/redis
 
-ADD redis.conf /etc/redis/redis.conf
+WORKDIR /var/lib/redis
 
 EXPOSE 6379
 
@@ -8,4 +8,4 @@ EXPOSE 6379
 # ADD_NAME
 # VOLUMES_FROM
 
-CMD ["/usr/bin/redis-server", "/etc/redis/redis.conf", "--loglevel verbose"]
+CMD ["/usr/bin/redis-server"]
